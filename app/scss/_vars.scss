@@ -1,0 +1,42 @@
+$accent: #a3bbc8;
+$default: #243f4d;
+$title: #191919;
+$bg: #fef7f0;
+
+%rubik-400{
+  font-family: 'Rubik-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500{
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%dm_sans-400{
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%dm_sans-500{
+  font-family: 'DMSans-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%dm_sans-700{
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%btn{
+    background-color: $accent;
+    color: #fff;
+    cursor: pointer;
+}
+
+@function max($numbers...){
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...){
+  @return m#{i}n(#{$numbers});
+}
