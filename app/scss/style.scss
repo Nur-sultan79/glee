@@ -156,6 +156,7 @@
   }
 }
 
+/* page */
 .top {
   background: #edf1f4;
   text-align: center;
@@ -238,6 +239,7 @@
   }
 }
 
+/* about */
 .about {
   padding: 105px 0;
   &__inner {
@@ -433,6 +435,121 @@
   }
 }
 
+/* product */
+
+.shop{
+  padding: 105px 0;
+  &__inner{
+    display: flex;
+  }
+
+}
+
+.filter-category{
+  &__item{
+    height: 43px;
+    padding: 7px 20px 0 15px;
+    @extend %rubik-400;
+    border-radius: 5px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/more.svg);
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 9px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__item--active{
+    background-color: #edf1f4;
+  }
+  &__link{
+    color: $default;
+  }
+}
+
+.filter-price{
+  &__label{
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    @extend %rubik-400;
+    & span{
+      position: relative;
+      padding: 0 20px 0 10px;
+      &::before{
+        content: '$';
+        position: absolute;
+        left: 0;
+      }
+      &::after{
+        content: '.00';
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
+
+.filter{
+  &__item{
+    width: 270px;
+    margin-bottom: 40px;
+  }
+  &__title{
+    display: inline-block;
+    padding-right: 57px;
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 25px;
+    &::after{
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 38px;
+      background-color: $accent;
+      right: 0;
+      top: 12px;
+    }
+  }
+}
+
+.irs--flat .irs-line {
+    top: 7px;
+    height: 3px;
+    background-color: #c2d2db;
+    border-radius: 0;
+}
+.irs--flat .irs-bar {
+    top: 6px;
+    height: 4px;
+    background-color: $accent;
+}
+.irs--flat .irs-handle {
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: $accent;
+}
+.irs--flat .irs-handle>i:first-child{
+  display: none;
+}
+.irs--flat .irs-min, .irs--flat .irs-max{
+  display: none;
+}
+.irs-from, .irs-to, .irs-single{
+  display: none;
+}
+.irs--flat{
+  height: 15px;
+}
+
+/* home */
 .top-slider {
   padding: 95px 0 45px;
   background-color: #fcd7b6;
