@@ -12,6 +12,13 @@ $(function () {
     },
   });
 
+  $(".star").rateYo({
+    starWidth: "12px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true,
+  });
+
   $(".top-slider__inner").slick({
     dots: true,
     arrows: false,
