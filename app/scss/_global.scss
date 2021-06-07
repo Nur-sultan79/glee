@@ -1,9 +1,9 @@
 html,
-body{
+body {
   height: 100%;
 }
 
-body{
+body {
   color: $default;
   font-size: 16px;
   line-height: 30px;
@@ -11,58 +11,58 @@ body{
   display: flex;
   flex-direction: column;
 }
-.main{
+.main {
   flex-grow: 1;
 }
-.container{
+.container {
   max-width: 1290px;
   margin: 0 auto;
   padding: 0 15px;
 }
-.title{
+.title {
   font-size: 36px;
   line-height: 40px;
   color: $title;
   text-align: center;
   margin-bottom: 25px;
 }
-.menu__items{
+.menu__items {
   display: flex;
   justify-content: center;
   margin-bottom: 95px;
 }
-.menu__item{
+.menu__item {
   color: #8b8b8b;
   border: none;
   background-color: transparent;
 }
-.menu__item + .menu__item{
+.menu__item + .menu__item {
   margin-left: 20px;
 }
 
-.breadcrumbs{
-  &__list{
+.breadcrumbs {
+  &__list {
     display: flex;
     justify-content: center;
   }
-  &__item{
+  &__item {
     padding-right: 22px;
     position: relative;
-    &::after{
-      content: '/';
+    &::after {
+      content: "/";
       position: absolute;
       right: 9px;
-    font-size: 15px;
+      font-size: 15px;
       color: #83898f;
     }
-    &:last-child{
+    &:last-child {
       padding-right: 0;
-      &::after{
+      &::after {
         display: none;
       }
     }
   }
-  &__link{
+  &__link {
     @extend %rubik-400;
     font-size: 14px;
     line-height: 24px;
@@ -70,7 +70,7 @@ body{
   }
 }
 
-.colleagues.colleagues-login{
-  margin-top: 0; 
-  padding: 75px 0 85px
+.colleagues.colleagues-login {
+  margin-top: 0;
+  padding: 75px 0 85px;
 }
