@@ -1,4 +1,22 @@
 $(function () {
+  $(".details-slide__thumb").slick({
+    asNavFor: ".details-slide__big",
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+    fade: true,
+    arrows: false
+  });
+  $(".details-slide__big").slick({
+    asNavFor: ".details-slide__thumb",
+    draggable: false,
+    arrows: false
+  });
+
+  $(".details__content-input").styler();
+
   $(".filter-price__input").ionRangeSlider({
     type: "double",
     prefix: "$",
