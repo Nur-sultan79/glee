@@ -666,7 +666,7 @@
 
 /* product-details */
 .details {
-  padding: 120px 0;
+  padding: 120px 0 95px;
   &__inner {
     display: flex;
   }
@@ -707,6 +707,33 @@
   &__content-name {
     padding-right: 3px;
   }
+
+  &__content-descr{
+    padding-bottom: 110px;
+    @extend %rubik-400;
+  }
+  &__content-buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+  &__content-button{
+    width: 240px;
+    padding: 15px 10px;
+    border: none;
+    background: #edf1f4;
+    color: $default;
+    @extend %rubik-500;
+    font-size: 18px;
+    border-radius: 5px;
+    & + .details__content-button{  
+      margin-left: 15px;
+    }
+  }
+  &__content-button--active{
+    background: $accent;
+    color: #fff;
+  }
 }
 
 .details-slide {
@@ -722,21 +749,79 @@
     height: 160px;
     border: 2px solid #f2f2f2;
     margin-bottom: 25px;
+    img{
+      margin-top: auto;
+      margin-left: auto;
+    }
   }
   &__big {
     width: 390px;
     height: 530px;
     border: 2px solid #f2f2f2;
     img {
-      width: 390px;
-      height: 530px;
-      object-fit: contain;
+      width: 245px;
+      height: 420px;
+      margin: 50px auto;
+    }
+  }
+}
+
+.details-slider{
+  padding-bottom: 100px;
+  &__title{
+    font-size: 36px;
+    margin-bottom: 90px;
+  }
+  &__items{
+    display: flex;
+    .slick-slide{
+      width: 270px !important;
+      margin-left: 25px;
+    }
+    & .products__content-item{
+      width: 270px;
+      text-align: center;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.15);
+      border-radius: 10px;
+      margin-left: 25px;
+      img{
+        margin-top: auto;
+      }
     }
   }
 }
 .slick-slide {
   opacity: 1 !important;
   left: 0 !important;
+}
+.slick-vertical .slick-slide{
+  height: 160px;
+  margin-bottom: 25px;
+}
+.slick-arrow{
+  width: 50px;
+  height: 50px;
+  border: 1px solid $accent;
+  background-color: transparent;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  top: -120px;
+  img{
+    margin: 0 auto;
+  }
+}
+.slick-next{
+  right: -50px;
+}
+.slick-prev{
+  right: 10px;
+  img{
+    transform: rotate(180deg);
+  }
 }
 .jq-ry-group-wrapper svg {
   margin: 0 13px 30px 0;
@@ -813,6 +898,9 @@
   width: 12px;
   height: 2px;
   background-color: $title;
+}
+.jq-number__spin:hover{
+  background: transparent;
 }
 
 /* home */

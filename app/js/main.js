@@ -15,6 +15,16 @@ $(function () {
     arrows: false
   });
 
+  $(".details-slider__items").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
+    prevArrow:
+      '<button class="slick-prev slick-arrow" type="button" style=""><img src="images/icons/line.svg" alt=""></button>',
+    nextArrow:
+      '<button class="slick-next slick-arrow" type="button" style=""><img src="images/icons/line.svg" alt=""></button>',
+  });
+
   $(".details__content-input").styler();
 
   $(".filter-price__input").ionRangeSlider({
