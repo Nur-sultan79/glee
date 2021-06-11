@@ -774,19 +774,17 @@
   }
   &__items{
     display: flex;
+    margin-left: -19px;
     .slick-slide{
-      width: 270px !important;
-      margin-left: 25px;
+      margin-left: 30px;
     }
     & .products__content-item{
-      width: 270px;
       text-align: center;
       display: flex !important;
       flex-direction: column;
       justify-content: space-between;
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.15);
       border-radius: 10px;
-      margin-left: 25px;
       img{
         margin-top: auto;
       }
@@ -804,7 +802,7 @@
 .slick-arrow{
   width: 50px;
   height: 50px;
-  border: 1px solid $accent;
+  border: 2px solid #edf1f4;
   background-color: transparent;
   padding: 0;
   text-align: center;
@@ -818,7 +816,7 @@
   right: -50px;
 }
 .slick-prev{
-  right: 10px;
+  right: 15px;
   img{
     transform: rotate(180deg);
   }
