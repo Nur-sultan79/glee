@@ -1,0 +1,94 @@
+.footer {
+  color: #7b7b7b;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.footer-top {
+  padding: 80px 0 70px;
+  border-bottom: 1px solid #dae4e9;
+  display: flex;
+  justify-content: space-between;
+  @extend %rubik-400;
+  &__contact {
+    width: 200px;
+    margin-right: 150px;
+  }
+  &__service {
+    width: 135px;
+    margin-right: 100px;
+  }
+  &__send {
+    width: 270px;
+    margin-left: 150px;
+  }
+  &__title {
+    text-transform: uppercase;
+    @extend %dm_sans-700;
+    color: #1f2044;
+    font-size: 16px;
+    margin: 15px 0 21px;
+  }
+  &__logo {
+    display: block;
+    margin-bottom: 25px;
+  }
+  &__list-item {
+    display: block;
+    margin-bottom: 15px;
+  }
+  &__list-link {
+    color: inherit;
+  }
+  &__address,
+  &__email,
+  &__phone {
+    display: block;
+    color: #7b7b7b;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    @extend %rubik-400;
+  }
+  &__text {
+    margin-bottom: 30px;
+  }
+  &__form-input {
+    border: none;
+    width: 170px;
+    height: 40px;
+    background-color: #fef7f0;
+    padding: 10px 13px;
+    &::placeholder {
+      font-size: 12px;
+      color: $default;
+      @extend %dm_sans-500;
+    }
+  }
+  &__form-btn {
+    border: none;
+    padding: 10px 15px;
+    @extend %btn;
+    @extend %dm_sans-400;
+  }
+}
+
+.footer-bottom {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @extend %rubik-400;
+  &__list {
+    display: flex;
+  }
+  &__list-item + .footer-bottom__list-item {
+    position: relative;
+    margin-left: 30px;
+    &::after {
+      content: "|";
+      position: absolute;
+      left: -15px;
+    }
+  }
+}

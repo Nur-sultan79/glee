@@ -1,0 +1,13 @@
+.colleagues {
+  background-color: $bg;
+  padding: 255px 0 95px;
+  margin-top: -175px;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    margin-right: 85px;
+  }
+}
