@@ -9,6 +9,7 @@
   border-bottom: 1px solid #dae4e9;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   @extend %rubik-400;
   &__contact {
     width: 200px;
@@ -90,5 +91,37 @@
       position: absolute;
       left: -15px;
     }
+  }
+}
+
+@media (max-width: 1210px) {
+  .footer-top {
+    &__contact {
+      margin-right: 50px;
+    }
+    &__service {
+      margin-right: 50px;
+    }
+    &__send {
+      margin-left: 70px;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .footer-top {
+    padding: 60px 15px;
+    &__service {
+      margin-right: 0;
+    }
+    &__send {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .footer-top{
+    padding: 40px 0;
   }
 }

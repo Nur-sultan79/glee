@@ -74,3 +74,33 @@ body {
   margin-top: 0;
   padding: 75px 0 85px;
 }
+
+@media (max-width: 970px){
+  .menu__items{
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .menu__item + .menu__item {
+    margin-left: 9px;
+  }
+}
+
+@media (max-width: 380px) {
+  .menu__items {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .menu__item + .menu__item {
+    margin-left: 0;
+  }
+}

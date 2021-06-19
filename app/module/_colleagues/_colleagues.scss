@@ -6,8 +6,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   &__img {
     margin-right: 85px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .colleagues {
+    &__img {
+      margin-right: 40px;
+    }
   }
 }

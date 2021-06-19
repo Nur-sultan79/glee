@@ -22,7 +22,7 @@ function nunjucks(){
   return src("app/*.njk")
     .pipe(nunjucksRender())
     .pipe(dest("app"))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 }
 
 function styles() {

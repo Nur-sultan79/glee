@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 .menu {
@@ -16,6 +17,9 @@
   &__list-link {
     color: #436372;
     @extend %rubik-500;
+  }
+  &__btn {
+    display: none;
   }
 }
 
@@ -52,5 +56,82 @@
     color: #000;
     text-align: center;
     line-height: 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .menu {
+    order: 1;
+    &__list {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      text-align: center;
+      display: block;
+      background-color: aliceblue;
+      transform: translateY(-200%);
+      transition: all 0.5s;
+      z-index: 1;
+    }
+    &__list-item {
+      & + .menu__list-item {
+        padding-left: 0;
+      }
+    }
+    &__list-link {
+      display: block;
+      padding: 15px 0px;
+    }
+    &__btn {
+      display: block;
+      margin: 0 15px -10px 30px;
+      border: none;
+      padding: 0;
+      background: transparent;
+      position: relative;
+      z-index: 9;
+    }
+  }
+  .user-nav {
+    z-index: 9;
+    margin-left: auto;
+    &__button {
+      z-index: 9;
+    }
+  }
+  ul.menu__list {
+    padding: 110px 0 15px;
+  }
+  .header {
+    &__inner.header__inner--active .menu__list {
+      transform: translateY(0%);
+    }
+  }
+  .logo {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 650px) {
+  .user-nav {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  ul.menu__list {
+    padding: 165px 0 15px;
+  }
+  .menu{
+    order: 0;
+  }
+}
+
+@media (max-width: 380px){
+  .user-nav {
+    &__button {
+      margin: 0 5px;
+    }
   }
 }
