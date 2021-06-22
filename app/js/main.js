@@ -4,6 +4,10 @@ $(function () {
     $('.header__inner').toggleClass('header__inner--active');
   });
 
+  $('.filter__btn').on('click', function(){
+    $('.shop__filter').slideToggle();
+  });
+
   $(".details-tabs__top-item").on('click', function(e){
     e.preventDefault();
     $(".details-tabs__top-item").removeClass("details-tabs__top-item--active");
@@ -26,7 +30,15 @@ $(function () {
   $(".details-slide__big").slick({
     asNavFor: ".details-slide__thumb",
     draggable: false,
-    arrows: false
+    arrows: false,
+    responsive: [
+    {
+      breakpoint: 1101,
+      settings: {
+        draggable: true,
+      }
+    }
+    ]
   });
 
   $(".details-slider__items").slick({
@@ -37,6 +49,26 @@ $(function () {
       '<button class="slick-prev slick-arrow" type="button" style=""><svg xmlns="http://www.w3.org/2000/svg" width="22" height="9" viewBox="0 0 22 9"><path fill="#436372" d="M1547.3,2629.47h16.94l-0.1,2.86a0.3,0.3,0,0,0-.08.2,0.323,0.323,0,0,0,.08.21l0.18,0.17a0.267,0.267,0,0,0,.4,0l4.2-4.21a0.3,0.3,0,0,0,.08-0.2,0.323,0.323,0,0,0-.08-0.21l-4.2-4.21a0.29,0.29,0,0,0-.4,0l-0.18.17a0.323,0.323,0,0,0-.08.21,0.318,0.318,0,0,0,.08.2l0.12,2.86h-16.97a0.3,0.3,0,0,0-.29.3v1.37A0.291,0.291,0,0,0,1547.3,2629.47Z" transform="translate(-1547 -2624)"/></svg></button>',
     nextArrow:
       '<button class="slick-next slick-arrow" type="button" style=""><svg xmlns="http://www.w3.org/2000/svg" width="22" height="9" viewBox="0 0 22 9"><path fill="#436372" d="M1547.3,2629.47h16.94l-0.1,2.86a0.3,0.3,0,0,0-.08.2,0.323,0.323,0,0,0,.08.21l0.18,0.17a0.267,0.267,0,0,0,.4,0l4.2-4.21a0.3,0.3,0,0,0,.08-0.2,0.323,0.323,0,0,0-.08-0.21l-4.2-4.21a0.29,0.29,0,0,0-.4,0l-0.18.17a0.323,0.323,0,0,0-.08.21,0.318,0.318,0,0,0,.08.2l0.12,2.86h-16.97a0.3,0.3,0,0,0-.29.3v1.37A0.291,0.291,0,0,0,1547.3,2629.47Z" transform="translate(-1547 -2624)"/></svg></button>',
+      responsive: [
+    {
+      breakpoint: 1101,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 970,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 850,
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+    ]
   });
 
   $(".details__content-input").styler();
